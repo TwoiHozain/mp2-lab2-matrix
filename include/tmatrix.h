@@ -255,7 +255,7 @@ public:
 	{
 		TDynamicMatrix tmp(*this);
 		for (size_t i = 0; i < sz; i++)
-			tmp[i] *= val;
+			tmp.pMem[i] = tmp.pMem[i] * val;
 		return tmp;
 	}
 
