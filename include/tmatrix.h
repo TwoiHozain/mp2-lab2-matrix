@@ -6,7 +6,7 @@
 
 #ifndef __TDynamicMatrix_H__
 #define __TDynamicMatrix_H__
-
+#include <cassert>
 #include <iostream>
 
 using namespace std;
@@ -34,7 +34,7 @@ public:
 
 	TDynamicVector(T* arr, size_t s) : sz(s)
 	{
-		//assert(arr != nullptr && "TDynamicVector ctor requires non-nullptr arg");
+		assert(arr != nullptr && "TDynamicVector ctor requires non-nullptr arg");
 		pMem = new T[sz];
 		std::copy(arr, arr + sz, pMem);
 	}
